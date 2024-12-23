@@ -13,7 +13,7 @@ def transcribe_video(video_path, model_name="base", output_json="transcript.json
     :return: Transcript as a list of dictionaries (start, end, text).
     """
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    
+    print(f"Using device: {device}")
     asr_options = {
         "multilingual": False,
         "hotwords": None,
